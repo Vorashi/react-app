@@ -4,17 +4,17 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-          <Router>
-      <nav>
-        <Link to="/api-data">Show All Posts</Link>
-        <Link to="/api-data/1">Show Post 1</Link>
-      </nav>
-      
-      <Routes>
-        <Route path="/api-data" element={<Hooks />} />
-        <Route path="/api-data/:id" element={<Hooks />} />
-      </Routes>
-    </Router>
+    <Router>
+    <nav>
+      <Link to="/weather/Moscow">Погода в Москве</Link>
+      <Link to="/weather/Saint Petersburg">Погода в Питере</Link>
+    </nav>
+
+    <Routes>
+      <Route path="/weather/:city" element={<Hooks />} />
+      <Route path="/weather" element={<Hooks />} />
+    </Routes>
+  </Router>
   );
 }
 
